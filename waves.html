@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <style>
+    
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+</style>
+  
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47560351-1', 'univ-savoie.fr');
+  ga('send', 'pageview');
+
+  </script>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script> <script type="text/javascript" src="path-to-mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <title>Waves - shape optimization approach</title>
+    <meta content="Beni Bogosel" name="author">
+  </head>
+  <body style=" max-width:900px; margin-left:auto ;margin-right:auto">
+     <p><a href="index.html">Home</a></p>  
+     <p><strong>Waves - a shape optimization approach</strong></p>       
+     <p> (work in progress, joint with Dorin Bucur) </p>    
+     <p style="text-align: left;"> Here are some initial numerical computations for the problem
+     $$ \min_{\int_D u=c} \frac{\mu^2}{\int_D |\nabla u|^2}+g\int_D yu +c \left( \varepsilon
+     \int_D |\nabla u|^2 +\frac{1}{\varepsilon} \int_D u^2(1-u)^2\right) $$ 
+     It is supposed that solutions to this problem are critical waves. </p>
+     
+     
+     <table width = "100%" border="2" >
+<tr> <td width = 20%><img src="waves/wave1.png" width="100%"  alt=""></td>
+     <td width = 20%><img src="waves/wave2.png" width="100%"  alt=""></td>
+     <td width = 20%><img src="waves/wave3.png" width="100%"  alt=""></td>
+     <td width = 20%><img src="waves/wave4.png" width="100%"  alt=""></td>
+     <td width = 20%><img src="waves/wave5.png" width="100%"  alt=""></td>
+      </tr>
+<tr> <td width = 20%><img src="waves/wave6.png" width="100%"  alt=""></td>
+     <td width = 20%><img src="waves/wave7.png" width="100%"  alt=""></td>
+     <td width = 20%><img src="waves/wave8.png" width="100%"  alt=""></td>
+     <td width = 20%><img src="waves/wave9.png" width="100%"  alt=""></td>
+     <td width = 20%><img src="waves/wave10.png" width="100%"  alt=""></td>
+      </tr>
+     </table>
+    <hr>
+    <p style = "font-size:8px"> Created: Apr 2015</p>
+  </body>
+</html>

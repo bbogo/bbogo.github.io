@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script> <script type="text/javascript" src="path-to-mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <title>Spectral Optimization under Perimeter Constraint</title>
+    <meta content="Beni Bogosel" name="author">
+     
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47560351-1', 'univ-savoie.fr');
+  ga('send', 'pageview');
+
+  </script>     
+  
+<link type="text/css" rel="stylesheet" href="styles.css">
+ 
+  </head>
+  <body style="              max-width:900px; margin-left:auto ;margin-right:auto">
+    
+    <?php include("header2.html");?>
+    <?php include("header.html");?>   
+  
+  
+    <p><strong>Optimization of Dirichlet Eigenvalues under Volume Constraint</strong></p>
+    
+    <p style="text-align: left;">To a bounded open set $\Omega\subset \Bbb{R}^N$ we
+    can associate the eigenvalues $$ 0<\lambda_1(\Omega) \leq \lambda_2(\Omega) \leq 
+    \cdots \to \infty$$ 
+    of the Dirichlet Laplace operator. They are solutions of the eigenvalue problem
+    $$ \begin{cases} -\Delta u = \lambda u  \\ u \in H_0^1(\Omega) \end{cases}$$. Note that 
+    the Dirichlet spectrum can be defined whenever the injection 
+    $H_0^1(\Omega)\hookrightarrow L^2(\Omega)$ is compact.</p>
+    
+    <p style="text-align: left;">The Dirichlet eigenvalues admit the following 
+    variational characterization:
+    $$ \lambda_k(\Omega) = \min_{S_k} \max_{u \in S_k} \frac{\int_\Omega |\nabla u|^2
+    }{\int_\Omega u^2},$$ where the minimum is taken over all $k$ dimensional subspaces
+    $S_k \subset H_0^1(\Omega)$. This allows us to see immediately that the eigenvalues
+    scale well under homotheties: $\lambda_k(t\Omega)=\frac{1}{t^2}\lambda_k(\Omega)$. 
+    Furthermore, $\lambda_k$ is decreasing with respect to set inclusion. </p>
+    
+    <p style="text-align: left;">In general, little is known regarding the shape which
+     optimizes $\lambda_k$ under volume constraint, for $k \geq 3$. It is known that in the case of a volume 
+     constraint, the ball minimizes $\lambda_1(\Omega)$ and two equal balls minimize
+     $\lambda_2(\Omega)$. For $k \geq 3$ we do not know analytically which shapes
+     are optimizers. This fact motivated some numerical computations made initially by
+     Edouard Oudet, more recently by P. Antunes, P. Freitas, using a Fourier boundary parametrization
+      and by Edouard Oudet, Amandine Berger, using Shapebox. They searched the 
+     optimal shape which minimizes $\lambda_k(\Omega)$ for $k\in\{3,4,5,...,15\}$. One 
+     striking open problem is to prove that the disk minimizes $\lambda_3(\Omega)$. 
+     Although numerical evidence exists for more than a decade, no analytical proof
+     of this fact exists. It is known that the disk is a local minimizer for $k=3$. 
+     Recently, Amandine Berger proved that the only values of $k$ for which the disk
+     can be a local minimizer for $\lambda_k$, in the case of the volume constraint, 
+     are $k=1,3$.</p>
+     
+     <p style="text-align: left;"> I present below some of the results I obtained
+     using the Fourier parametrization of the radial function 
+     $$ \rho(\theta) = a_0+\sum_{k=1}^n a_k \cos k\theta +\sum_{k=1}^n \sin k\theta.$$ 
+     This was the method used by Braxton Osting in an article studying the maximal
+     ratios of eigenvalues and by Antunes and Freitas for the study presented below.
+     At this point, it is possible to write the approximation of the eigenvalue as a
+     function of $2n+1$ variables. For each variable, the partial derivative can be 
+     computed using the formulas
+     $$ \frac{\partial \lambda_k}{\partial a_k} = -\int_0^{2\pi}r(\theta)\cos(k\theta)
+     \left| \frac{\partial u}{\partial n}(\rho(\theta),\theta)\right|^2 d \theta$$
+     $$ \frac{\partial \lambda_k}{\partial b_k} = -\int_0^{2\pi}r(\theta)\sin(k\theta)
+     \left| \frac{\partial u}{\partial n}(\rho(\theta),\theta)\right|^2 d \theta.$$
+     Then an optimization algorithm based on the gradient can be used. The computation
+     of the eigenvalues and eigenfunctions was made using <a href="https://code.google.com/p/mpspack/">MpsPack</a>.
+     For the optimization part I used various
+     versions of LBFGS algorithms, like 
+     <a href="http://www.cs.toronto.edu/~liam/software.shtml">LBFGS</a>, <a href="http://www.cs.ubc.ca/~schmidtm/Software/minFunc.html">minFunc</a>
+     , <a href="http://www.cs.nyu.edu/overton/software/hanso/">HANSO</a>. When the resulting
+     shape was symmetric, I remade the computation using the symmetry assumption,
+     and if I obtained a better shape, I kept that shape.     
+     
+     <p style="text-align: left;"> Below, the optimal shapes for $k \leq 21$ are presented
+     with their optimal value for $\lambda_k(\Omega)|\Omega|^2$ and the information on
+     their multiplicity. The shapes obtained for $k \leq 15$ are exactly the shapes
+     Antunes and Freitas obtained in their computations. For $k \ge 16$ these are
+     the best shapes I could find. If you have some better candidates, please
+     let me know.</p>
+     
+     <center>
+    <table id = "thin" style = "font-size:15px" width = "80%" border="1">
+<tr><td><img src="volume2Dpics/lam5vol.png " width="100%"  alt=""> </td>
+    <td><img src="volume2Dpics/lam6vol.png " width="100%"  alt=""></td>
+    <td><img src="volume2Dpics/lam7vol.png " width="100%" alt=""></td>
+    <td><img src="volume2Dpics/lam8vol.png " width="100%" alt=""></td>
+<tr align = "center">
+    <td><p>$\lambda_5 = 78.15$</p>
+    <p>multiplicity $2$</p></td>
+    <td><p>$\lambda_6 = 88.48$</p>
+    <p>multiplicity $3$</p></td>
+    <td><p>$\lambda_7 = 106.16$</p>
+    <p>multiplicity $3$</p></td>
+    <td><p>$\lambda_8 = 118.88$</p>
+    <p>multiplicity $3$</p></td>
+</tr>
+<tr><td><img src="volume2Dpics/lam9vol.png " width="100%"  alt=""> </td>
+    <td><img src="volume2Dpics/lam10vol.png " width="100%"  alt=""></td>
+    <td><img src="volume2Dpics/lam11vol.png " width="100%" alt=""></td>
+    <td><img src="volume2Dpics/lam12vol.png " width="100%" alt=""></td>
+<tr align = "center">
+    <td><p>$\lambda_9 = 132.48$</p>
+    <p>multiplicity $3$</p></td>
+    <td><p>$\lambda_{10} = 142.69$</p>
+    <p>multiplicity $4$</p></td>
+    <td><p>$\lambda_{11} = 159.40$</p>
+    <p>multiplicity $4$</p></td>
+    <td><p>$\lambda_{12} = 172.87$</p>
+    <p>multiplicity $4$</p></td>
+</tr>
+<tr><td><img src="volume2Dpics/lam13vol.png " width="100%"  alt=""> </td>
+    <td><img src="volume2Dpics/lam14vol.png " width="100%"  alt=""></td>
+    <td><img src="volume2Dpics/lam15vol.png " width="100%" alt=""></td>
+    <td><img src="volume2Dpics/lam16vol.png " width="100%" alt=""></td>
+<tr align = "center">
+    <td><p>$\lambda_{13} = 187.02$</p>
+    <p>multiplicity $4$</p></td>
+    <td><p>$\lambda_{14} = 198.96$</p>
+    <p>multiplicity $4$</p></td>
+    <td><p>$\lambda_{15} = 209.63$</p>
+    <p>multiplicity $5$</p></td>
+    <td><p>$\lambda_{16} = 231.07$</p>
+    <p>multiplicity $4$</p></td>
+</tr>
+<tr><td><img src="volume2Dpics/lam17vol.png " width="100%"  alt=""> </td>
+    <td><img src="volume2Dpics/lam18vol.png " width="100%"  alt=""></td>
+    <td><img src="volume2Dpics/lam19vol.png " width="100%" alt=""></td>
+    <td><img src="volume2Dpics/lam20vol.png " width="100%" alt=""></td>
+<tr align = "center">
+    <td><p>$\lambda_{17} = 241.04$</p>
+    <p>multiplicity $3$</p></td>
+    <td><p>$\lambda_{18} = 256.06$</p>
+    <p>multiplicity $4$</p></td>
+    <td><p>$\lambda_{19} = 268.18$</p>
+    <p>multiplicity $4$</p></td>
+    <td><p>$\lambda_{20} = 281.27$</p>
+    <p>multiplicity $5$</p></td>
+</tr>
+<tr><td><img src="volume2Dpics/lam21vol.png " width="100%"  alt=""> </td>
+    <td><img src="volume2Dpics/lam22vol.png " width="100%"  alt=""></td>
+    <td><img src="volume2Dpics/lam23vol.png " width="100%" alt=""></td>
+    <td><img src="volume2Dpics/lam24vol.png " width="100%" alt=""></td>
+<tr align = "center">
+    <td><p>$\lambda_{21} = 289.56$</p>
+    <p>multiplicity $4$</p></td>
+</tr>
+</table>
+    </center>
+    <hr>
+    <p style = "font-size:8px"> Created: Dec 2014, Last modified: 16 Feb 2015</p>
+  </body>
+</html>

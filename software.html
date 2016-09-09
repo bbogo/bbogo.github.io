@@ -1,0 +1,137 @@
+<html>
+  <head>
+   <link rel="stylesheet" href="styles.css">
+    <!--<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47560351-1', 'univ-savoie.fr');
+  ga('send', 'pageview');
+
+  </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script> <script type="text/javascript" src="path-to-mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+    <title>Software</title>
+    
+    
+    
+  </head>
+  <body style="   max-width:900px; margin-left:auto ;margin-right:auto">
+    <?php include("header2.html");?>
+    <?php include("header.html");?>
+    
+   <strong>Personal software</strong>
+   
+   <p> Below you can find a few algorithms I developed myself. I work mainly in 
+   Matlab and FreeFem, so the codes will be related to these two programming
+   languages. If you find some of the codes below useful and you use them in your research, please
+   give credit by citing a related publication. If you have suggestions or improvements concerning any of these
+   I'd be happy to discuss them with you.</p>
+
+   <div style="background-color:#FAEBD7; color:black; margin:5px; padding:5px;">
+   <strong>Computation of the Steklov/Wentzell Spectrum using FreeFem</strong>
+
+   <p>The following program computes the first few eigenvalues of the Steklov/Wentzell operator for a two
+   dimensional shape. The current shape is quite particular, but it can be changed by using
+    any of the methods available in FreeFem for defining boundaries. This code was used in 
+    <a href="pdfs/fsol_article.pdf">my article</a>
+    concerning the computation of the Wentzell spectrum with fundamental solutions in order
+    to compare my results to the ones obtained with a mesh-based method. You can download the FreeFem program 
+    here: <a href="software/wentzel_test.edp">wentzel_test.edp</a>
+    (right click, Save as).</p>
+    </div>    
+    
+    <div style="background-color:#FAEBD7; color:black; margin:5px; padding:5px;">
+    <strong> The Steklov/Wentzell Spectrum using fundamental solutions in Matlab</strong>
+    
+    <p>The following algorithm uses fundamental solutions in order to solve certain spectral problems.
+    The method was inspired by Alves and Antunes and it is presented in detail in 
+    <a href="pdfs/fsol_article.pdf">this publication</a>. You can get the program here: 
+    <a href="software/wentzell_test.m">wentzell_test.m</a> (right click, Save as) You could
+    check out the huge speed difference between this fundamental solution formulation and 
+    the FreeFem code.
+    </p>
+    </div>    
+    
+    <div style="background-color:#FAEBD7; color:black; margin:5px; padding:5px;">
+    <strong> Dirichlet eigenvalue optimization in 2D with FreeFem </strong>
+    
+    <p> <table><tr><td width = 80%> The following algorithm is an example of eigenvalue shape optimization problem under area constraint in two dimensions.
+    It uses finite element computations in FreeFem. This type of numerical computations were initially performed by E. Oudet
+    and recently by P. Antunes and P. Freitas. I revisited them using Mpspack in my <a href="pdfs/PHD_thesis.pdf">phd thesis</a>. 
+    The following program works rather well for the first 10 eigenvalues. Sometimes different initial conditions
+    should be used to get close to the minimizer. You can get the program here: 
+    <a href="software/dirichlet_low10.edp">dirichlet_low10.edp</a> (right click, Save as).</td>
+    <td width = 20%><img  src="pics/lam5freefem.png" width="100%"></td></tr></table>
+    </p>
+    </div>
+    
+    <div style="background-color:#FAEBD7; color:black; margin:5px; padding:5px;">
+    <strong> Maximization of the fundamental eigenvalue in domains with holes - FreeFem code</strong>
+    
+    <p> <table><tr><td width = 80%> We want to find the position of some circular holes in a two dimensional domain
+    which maximize the first Dirichlet Laplace eigenvalue. More details about the problem and the results 
+    you can obtain using the algorithm can be found <a href="max_dirichlhet_holes.html">here</a>. 
+    The FreeFem code is available here: 
+    <a href="software/optimal_holes.edp">optimal_holes.edp</a> (right click, Save as). </td>
+     <td width = 20%><img  src="pics/holes10_0199.png" width="100%"></td></tr></table></p>
+     </div>
+     
+     <div style="background-color:#FAEBD7; color:black; margin:5px; padding:5px;">
+    <strong> Numerical study of Polya's conjecture with FreeFem </strong>
+    
+    <p> <table><tr><td width = 80%> The following script starts from a polygon and evolves using the gradient flow
+    given by the derivative of the first Dirichlet eigenvalue under area constraint. We can see that the algorithm
+    converges towards a regular polygon, which is to be expected, since Polya's conjecture suggests that
+    regular polygons minimize the first Dirichlet Laplace eigenvalue under area constraint.
+    More details about the problem and the algorithm can be found <a href="faber_krahn_polygons.html">here</a>. 
+    The FreeFem code is available here: 
+    <a href="software/Polya_flow.edp">Polya_flow.edp</a> (right click, Save as). </td>
+     <td width = 20%><img  src="spectral_polygons/Polya_flow.png" width="100%"></td></tr></table></p>
+    </div> 
+    
+    <p><strong>Disclaimer</strong>: these software programs are provided "as is", without any warranty of any kind... The 
+    author cannot be held responsible for any misuse of these programs or any damage that may come from using them. </p>
+    
+   <strong>Useful computing software</strong>   
+   
+   <p>Here are some Matlab toolboxes I use a 
+   lot:
+  <ul><li><a href="http://www.cs.toronto.edu/~liam/software.shtml">LBFGS</a> 
+  by Liam Stewart: a nice implementation
+  of the LBFGS optimization algorithm. It allows
+  bounds on every variable and the use of
+  callback functions.</li>
+  <li><a href="http://www.cs.ubc.ca/~schmidtm/Software/minFunc.html">minFunc</a> by Mark Schmidt.   
+  Minfunc allows the use of many types of
+  optimization algorithms like steepest descent
+  lbfgs, etc.</li> 
+  <li><a href="http://www.cs.nyu.edu/overton/software/hanso/">HANSO</a>: BGFS 
+  optimization implementation.  </li> 
+  <li> <a href="https://code.google.com/p/mpspack/">MpsPack</a>. A Matlab 
+  toolbox which solves all sorts of problems from PDE to eigenvalue problems. It
+  uses methods based on particular solutions. It is rather fast and very precise.</ul>   
+   </p>
+   
+   <p> Although I'm not a specialist, I find <a href="http://www.freefem.org/ff++/">FreeFem++</a> to be really useful
+   in the study of PDEs. It has all you need to get you started, and all the
+   dirty work regarding meshes is done automatically once you give it the right
+   commands. For beginners, like me, there's a really nice visual editor for 
+   FreeFem++, which makes the installation and use of FreeFem programs very
+   easy. You can find it here: <a href="http://www.ann.jussieu.fr/~lehyaric/ffcs/index.htm">freefem++cs</a>
+   </p>    
+   
+   
+<hr>
+ <p style = "font-size:8px"> Created: Jun 2015</p>
+  </body>
+</html>

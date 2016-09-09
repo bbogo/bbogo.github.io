@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" src="path-to-mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>test_math</title>
+  </head>
+  <body> This is a math equation $x^2 = 3$.
+  </body>
+</html>

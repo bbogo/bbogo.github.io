@@ -1,0 +1,395 @@
+<html>
+  <head>
+   <link rel="stylesheet" href="styles.css">
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47560351-1', 'univ-savoie.fr');
+  ga('send', 'pageview');
+
+  </script>
+    <script type="text/javascript">
+   // Utilitaires javascript
+
+   // Outil pour basculement de boîte
+
+   // La fonction qui affiche/masque l'élément 
+   function bascule(elem)
+    {
+     // Quel est l'état actuel ?
+     etat=document.getElementById(elem).style.visibility;
+     if(etat=="hidden"){document.getElementById(elem).style.visibility="visible";
+     //document.getElementById(but).value="-";
+     document.getElementById(elem).style.display='block';}
+     else{document.getElementById(elem).style.visibility="hidden";
+     //document.getElementById(but).value="+";
+     document.getElementById(elem).style.display='none';}
+    }
+   </script>
+     
+  
+  
+  
+  
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script> <script type="text/javascript" src="path-to-mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+    <title>Publications</title>
+    
+    
+    
+  </head>
+  <body class = "main">
+    <?php include("header2.html");?>
+     
+     <p id ="title"> 
+           <strong>Publications: </strong>
+     </p>
+     
+     <p id="ex">
+     [7] B. Bogosel, <a href="pdfs/reg_perim.pdf">Regularity result for a shape optimization problem under
+perimeter constraint</a>, 2016,  
+      <br>      
+      (submitted)
+      <br>
+      <a  onclick="bascule('box_7')"><button class="button" id="join">
+     <font color="red">Abstract</font></button></a>    
+        
+        <div id="box_7" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">We study the problem of optimizing the eigenvalues of the Dirichlet Laplace operator
+under perimeter constraint. We prove that optimal sets are smooth by writing a general
+optimality condition in the case the optimal eigenvalue is multiple. As a consequence we find
+that the optimal $k$-th eigenvalue is strictly smaller than the optimal $k+1$-th eigenvalue. We
+also provide an elliptic regularity result for sets with positive and bounded weak curvature.
+</div></div>  
+       
+       <div id="box_n7" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">
+<table><tr>
+<td width=10%><a href="modica_mortola_sphere.html"><img id = "rounded"  src="buttons/web_bc8b.png" width = 100%  alt=""></a></td>
+<td width=10%><a href="mesh_shoptim.html"><img id = "rounded"  src="modica_sphere/Optimized-tor6.png" width = 100%  alt=""></a></td>
+ <td align= "center"> For details click on one of the pictures. </td></tr>
+</table>
+</div></div>
+
+    </p>     
+     
+     <p id="ex">
+     [6] B. Bogosel, E. Oudet, <a href="pdfs/manifolds_perimeter.pdf">Partitions of Mimimal Length on Manifolds</a>, 2016,  
+      <br>      
+      (accepted in Experimental Mathematics)
+      <br>
+      <a  onclick="bascule('box_6')"><button class="button" id="join">
+     <font color="red">Abstract</font></button></a>
+      <a  onclick="bascule('box_n6')"><font color="#0033CC"> 
+     <button class="button" id="join">Numerics</button></font></a>    
+        
+        <div id="box_6" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">We study partitions on three dimensional manifolds which minimize the total geodesic perimeter. 
+We propose a relaxed framework based on a $\Gamma$-convergence result and we show some numerical results. 
+We compare our results to those already present in the literature in the case of the sphere. 
+For general surfaces we provide an optimization algorithm on meshes which can give a good approximation of the optimal cost, 
+starting from the results obtained using the relaxed formulation.
+</div></div>  
+       
+       <div id="box_n6" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">
+<table><tr>
+<td width=10%><a href="modica_mortola_sphere.html"><img id = "rounded"  src="buttons/web_bc8b.png" width = 100%  alt=""></a></td>
+<td width=10%><a href="mesh_shoptim.html"><img id = "rounded"  src="modica_sphere/Optimized-tor6.png" width = 100%  alt=""></a></td>
+ <td align= "center"> For details click on one of the pictures. </td></tr>
+</table>
+</div></div>
+
+    </p>          
+     
+    <p id="ex">
+     [5] B. Bogosel, D. Bucur, A. Giacomini, <a href="pdfs/BBG-submitted.pdf">Optimal Shapes Maximizing the Steklov Eigenvalues</a>, 2016,  
+      <br>      
+      (submitted)
+      <br>
+      <a  onclick="bascule('box_5')"><button class="button" id="join">
+     <font color="red">Abstract</font></button></a>
+      <a  onclick="bascule('box_n5')"><font color="#0033CC"> 
+     <button class="button" id="join">Numerics</button></font></a>    
+        
+        <div id="box_5" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">In this paper we consider the problem of maximizing the $k$-th Steklov eigenvalue of
+the Laplacian (or a more general spectral functional), among all sets of $\Bbb{R}^d$ of prescribed volume.
+We prove existence of an optimal set and get some qualitative properties of the solutions in a relaxed setting.  
+In particular, in $\Bbb{R}^2$, we prove that the optimal set consists in the union of at
+most $k$ disjoint Jordan domains with finite perimeter. A key point of our analysis is played by
+an isodiametric control of the Stelkov spectrum. We also perform some numerical experiments
+and exhibit the optimal shapes maximizing the $k$-th eigenvalues under area constraint in $\Bbb{R}^2$, for
+$k = 1,...,10$. 
+</div></div>  
+       
+       <div id="box_n5" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">
+<table><tr>
+<td width=10%><a href="steklov_opt.html"><img id = "rounded"  src="buttons/stek_param10.png" width = 100%  alt=""></a></td>
+ <td align= "center"> For details click on one of the pictures. </td></tr>
+</table>
+</div></div>
+
+    </p>          
+    
+    <p id="ex">
+     [4] B. Bogosel, <a href="pdfs/fsol_article.pdf">The method of fundamental solutions 
+     applied to boundary eigenvalue problems</a>, 2015,  
+      <br>      
+      (accepted in Journal of Computational and Applied Mathematics)
+      (<a href="http://dx.doi.org/10.1016/j.cam.2016.04.008">Journal link</a>)
+      <br>
+      <a  onclick="bascule('box_4')"><button class="button" id="join">
+     <font color="red">Abstract</font></button></a>
+      <a  onclick="bascule('box_n4')"><font color="#0033CC"> 
+     <button class="button" id="join">Numerics</button></font></a>    
+        
+        <div id="box_4" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">We develop methods based on fundamental solutions to compute the Steklov, 
+Wentzell and Laplace-Beltrami eigenvalues. In the class of smooth simply connected two dimensional domains, 
+the numerical method is accurate and fast. A theoretical error bound is given along with comparisons with 
+mesh-based methods. We illustrate the use of this method in the study of a wide class of shape optimization 
+problems in two dimensions. We extend the method to the computation of the Laplace-Beltrami eigenvalues 
+on surfaces and we investigate some spectral optimal partitioning problems. 
+</div></div>  
+       
+       <div id="box_n4" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">
+<table><tr>
+<td width=10%><a href="steklov_opt.html"><img id = "rounded"  src="buttons/stek_param10.png" width = 100%  alt=""></a></td>
+
+<td width=10%><a href="spherical_spectral.html"><img id = "rounded" 
+ src="buttons/refined32.png"  width="100%"></a></td> 
+ <td width=10%><a href="manifolds_spectral.html"><img id = "rounded"  src="spectral_sphere/belbc4.png" 
+width="100%" alt=""></a></td>
+<td align= "center"> For details click on one of the pictures. </td></tr> 
+</table>
+</div></div>
+
+    </p> 
+    
+    <p id="ex">
+     [3] B. Bogosel, <a href="pdfs/steklov.pdf">The Steklov spectrum on moving domains</a>, 2015,  
+     <br> (accepted in Applied Mathematics and Optimization) (<a href="http://link.springer.com/article/10.1007%2Fs00245-015-9321-5">Journal link</a>)
+      <br>
+      <a  onclick="bascule('box_3')"><button class="button" id="join">
+     <font color="red">Abstract</font>
+     </button></a>  
+        <div id="box_3" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">We study the continuity of the Steklov spectrum on variable 
+domains with respect to the Hausdorff convergence. A key point of the article 
+is understanding the behaviour of the traces of Sobolev functions on moving 
+boundaries of sets satisfying an uniform geometric condition.
+ As a consequence, we are able to prove existence results for shape optimization
+  problems regarding the Steklov spectrum in the family of sets satisfying 
+  a $\varepsilon$-cone condition and in the family of convex sets.
+</div></div>  
+    </p>
+    
+     
+   
+     
+  
+  <p id="ex">         
+  [2] B. Bogosel, E. Oudet, 
+  <a href="pdfs/gamma-conv-perim.pdf">Qualitative and Numerical Analysis 
+  of a Spectral Problem with Perimeter Constraint</a>, 2014<br> (accepted in SIAM Journal on Control and Optimization) (<a href="http://epubs.siam.org/doi/abs/10.1137/140999530">Journal link</a>)
+      <br>
+ <a  onclick="bascule('box_2')"><button class="button" id="join">
+     <font color="red">Abstract</font>
+     </button></a>   
+     <a  onclick="bascule('box_n2')"><font color="#0033CC">
+     <button class="button" id="join">Numerics</button></font></a>   
+ <div id="box_2" class="boxgrand" style="visibility: hidden; display: none">
+<div class="decal">We consider the problem of optimizing the 
+$k^{\text{th}}$ eigenvalue of Dirichlet Laplace operator under perimeter 
+constraint. We provide a new method based on a $\Gamma$-convergence result for
+ approximating the corresponding optimal shapes. We also give new optimality 
+ conditions in the case of multiple eigenvalues. We deduce from previous 
+ conditions the fact that optimal shapes never contain flat parts in their 
+ boundaries.
+</div></div>
+<div id="box_n2" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">
+<table><tr>
+<td width=10%><a href="gconv-perim.html"><img id = "rounded" 
+ src="buttons/lam2_3D.png"  width="100%"></a></td> 
+ <td width=10%><a href="spectral_perim.html"><img id = "rounded"  src="buttons/lam15.jpg" 
+width="100%" alt=""></a></td>
+<td align= "center"> For details click on one of the pictures. </td></tr> 
+</table>
+</div></div>
+    </p>
+    
+    <p id="ex"> [1] B. Bogosel, B. Velichkov,&nbsp;<a href="pdfs/revision_SINUM.pdf">A
+        multiphase shape optimization problem for eigenvalues: qualitative study
+        and numerical results</a>, 2014 <br> (accepted in SIAM Journal on Numerical Analysis) (<a href="http://epubs.siam.org/doi/abs/10.1137/140976406">Journal link</a>)
+        <br>
+     <a  onclick="bascule('box_1')"><button class="button" id="join">
+     <font color="red">Abstract</font>
+     </button></a>   
+     <a  onclick="bascule('box_n1')"><font color="#0033CC">
+     <button class="button" id="join">Numerics</button></font></a>      
+     
+      
+     
+        <div id="box_1" class="boxgrand" style="visibility: hidden;display: none" >
+<div class="decal">We consider the multiphase shape optimization problem
+$$\min\left\{\sum_{i=1}^h\lambda_1(\Omega_i)+\alpha|\Omega_i|:\ \Omega_i\ 
+\hbox{open},\ \Omega_i\subset D,\ \Omega_i\cap\Omega_j=\emptyset\right\},$$
+where $\alpha>0$ is a given constant and $D\subset\Bbb{R}^2$ is a bounded open 
+set with Lipschitz boundary. We give some new results concerning the qualitative 
+properties of the optimal sets and the regularity of the corresponding 
+eigenfunctions. We also provide numerical results for the optimal partitions.
+</div></div>
+       <div id="box_n1" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">
+<table><tr>
+<td width=10%><a href="multiphase.html"><img id = "rounded"  src="buttons/periodic8-penta.png" width="100%" alt=""></a></td> 
+<td align = "center"> For details click on the picture. </td></tr> 
+</table>
+</div></div>
+   </p>
+     
+<p id = "title"> <strong>Expository mathematics: </strong></p>
+     
+     <p id="ex"> 
+    [1] B. Bogosel, <a href="pdfs/mardenthm.pdf">A geometric proof
+    of the Siebeck-Marden theorem</a>, 2015, <br> (accepted in American Mathematical Monthly)
+    <br>
+    <a  onclick="bascule('box_e1')"><button class="button" id="join">
+     <font color="red">Abstract</font>
+     </button></a>
+        <div id="box_e1" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">The Siebeck-Marden theorem relates the roots of a third 
+degree polynomial and the roots of its derivative in a geometrical way. 
+A few geometric arguments imply that every inellipse for a triangle is uniquely
+ related to a certain logarithmic potential via its focal points. 
+ This fact provides a new direct proof of a general form of the result of 
+ Siebeck and Marden.
+</div></div>    
+     </p>         
+     
+    <p id = "title"> 
+    <strong> Preprints </strong>   
+   </p>    
+    
+    <p id="ex">
+      B. Bogosel, <a href="pdfs/anisop_article.pdf">
+     Partitions minimizing an anisotropic length</a>, (preprint)  
+     <br>
+      <a  onclick="bascule('box_p1')"><button class="button" id="join">
+     <font color="red">Abstract</font></button></a>
+      <a  onclick="bascule('box_np1')"><font color="#0033CC"> 
+     <button class="button" id="join">Numerics</button></font></a>    
+        
+        <div id="box_p1" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">We present a Gamma-convergence approximation 
+for the total anisotropic length of a partition. 
+This theoretical result gives rise to a numerical method which 
+allows the study of minimal partitions with respect to
+ different anisotropies. We also give a numerical framework 
+ for the study of isoperimetric problems with density. 
+</div></div>  
+       
+     <div id="box_np1" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">
+<table><tr>
+<td width=10%><a href="anisotropic.html"><img id = "rounded" 
+ src="partitions/anihv10.png"  width="100%"></a></td> 
+<td align= "center"> For details click on one of the pictures. </td></tr> 
+</table>
+</div></div> 
+     </p>
+    
+    <p id = "title" ><strong>PHD Thesis</strong> </p>
+    
+    <i><font size="5" color="#0000A0">Shape optimization and spectral problems</font></i>  <br>
+    <a href="pdfs/PHD_thesis.pdf">(manuscript)</a>
+    <a href="pdfs/soutenance_v2.pdf">(slides)</a>
+    <a  onclick="bascule('box_t1')"><button class="button" id="join">
+     <font color="red">Summary</font>
+     </button></a>    
+     <div id="box_t1" class="boxgrand" style="visibility: hidden;display: none">
+<div class="decal">
+ <p> We study some shape optimization problems associated to spectral and
+ geometric functionals from both theoretical and numerical points of view. One of the
+  main ideas is to provide $\Gamma$-convergence frameworks allowing the construction 
+  of numerical approximation methods for the quantities we wish to optimize. In particular,
+   these numerical methods are applied to the study of the Dirichlet-Laplace eigenvalues 
+   under perimeter constraint in two and three dimensions and to optimization problems 
+   concerning multiphase configurations and partitions in the plane or on manifolds in $\Bbb{R}^3$. 
+   </p> 
+<p>
+As well, we focus on the analysis of the Steklov spectrum in different geometric classes of domains. 
+Together with the study of existence of extremal domains and the spectral stability under 
+geometric perturbations, we develop methods based on fundamental solutions in order to
+ compute numerically the spectrum. A detailed analysis of the numerical method shows 
+ that we get an important precision, while the computation time is significantly decreased 
+ compared to mesh-based methods. This approach is extended to the computation of Wentzell
+  and Laplace-Beltrami eigenvalues.
+  </p>
+</div></div>
+    
+    
+    
+    
+    <p id="title"><strong>Numerical computations:</strong> (for details click on 
+    the pictures)</p>
+      
+    <?php include("header.html");?>
+    
+    
+    
+   <p id = "title" ><strong>Talks</strong> </p>
+   
+   <ul>
+   
+   <li> Reunion ANR Optiform - Geometrya, Paris, Mars 2016 <a href="pdfs/paris_2016.pdf">(slides)</a>
+   
+   <li> JERAA, November 2015 <a href="pdfs/jeraa_2015.pdf">(slides)</a>
+   
+   <li> Discussion group EDPs Lama, November 2015. <a href="pdfs/lama_nov_2015.pdf">(slides)</a>
+   
+   <li> Workshop on Calculus of Variations, September 2015. <a href="pdfs/chambery_sept2015.pdf">(slides)</a>
+   
+   <li> Reunion ANR Optiform Paris, June 2015. <a href="pdfs/optiform_paris_2015.pdf">(slides)</a>
+   
+   <li> Colloque InterActions, Grenoble 2015. <a href="pdfs/interactions.pdf">(slides)</a>
+   
+   <li> Seminar Optimization team, Avignon 2015. <a href="pdfs/bogosel-avignon.pdf">(slides)</a>
+   
+   <li> Reunion ANR Optiform Rennes, January 2015. <a href="pdfs/optiform-rennes.pdf">(slides)</a>
+       
+   <li> Discussion group EDPs Lama, May 2014. <a href="pdfs/lamkgconv.pdf">(slides)</a>
+      
+   <li> Seminar EDPs team LAMA, Universite de Savoie, July 2013. <a href="pdfs/exp_aniso.pdf">(slides)</a>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   </ul>
+
+<hr>
+ <p style = "font-size:8px"> Created: Jun 2015</p>
+  </body>
+</html>
